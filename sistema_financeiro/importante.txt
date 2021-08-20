@@ -1,3 +1,6 @@
+NAO ESTOU TRAZENDO A PASTA
+node_modules
+MAS TEM AS INSTRUÇOES DE COMO INSTALAR 
 https://github.com/IsabelBoaventura/Celke.git
 
 
