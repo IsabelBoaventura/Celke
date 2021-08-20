@@ -1,0 +1,85 @@
+https://github.com/IsabelBoaventura/Celke.git
+
+
+…or create a new repository on the command line
+echo "# Celke" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/IsabelBoaventura/Celke.git
+git push -u origin main
+a
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/IsabelBoaventura/Celke.git
+git branch -M main
+git push -u origin main
+
+
+
+
+
+SEQUENCIA PARA CRIAR O PROJETO
+
+precisa ter o Node instalado
+lembrando que quando se instala pela primeira vez ,tem de fechar e abrir de novo o arquivo onde esta verificando que ele esta instalado
+no caso 'cmd';
+
+toda a vez que for iniciar o projeto, rodar:
+>>>>>   npm start
+
+
+Criar o projeto React
+
+### npx create-react-app my-app
+
+Acessar o diretório do projeto
+### cd my-app
+eu prefiro entrar na pasta direto
+
+para abrir o projeto no VSCode, eu prefiro, dentro da pasta
+na linha de cima, onde aparece o endereço digitar "cmd"
+irá abrir o terminal
+com o terminal aberto,  e estando dentro da pasta de trabalho
+digito o comando para abrir o VSCode
+###  code .
+
+
+### npm start 
+irá abrir no navegador uma nova guia mostrando o trabalho 
+
+
+Será usada a dependencia React Router
+###  npm install react-router-dom
+Gerenciador das rotas 
+
+
+ctrl + C 
+para pausar o servidor 
+
+Reinicia o projeto
+
+Rota, endereço para acessar determinada pagina 
+
+Dentro do src , criar o diretório 'Pages'
+Dentro do Diretório Pages, criar o diretório Home
+Dentro do Diretório Home, criar o arquivo chamado 'index.js'
+Incluir este arquivo : "import { Home } from './pages/Home/index.js';"
+não precisa add o index.js,  o sistema ja descobre sozinho 
+
+
+
+
+
+
+Aula 01 - Como Criar front-end do sistema Financeiro  com React 
+[[ 18 minutos de video ]]
+
+
+
+
+
+
+
+
