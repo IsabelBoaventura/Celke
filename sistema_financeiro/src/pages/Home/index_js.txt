@@ -1,0 +1,3 @@
+importar o react
+criar a funcao Home
+funcao Home será um 'areon function' 
