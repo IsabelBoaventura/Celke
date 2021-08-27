@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 export const  Home=() =>{
+
+    const [data, setData] = useState([]);
     var dataAtual = new Date();
     var ano = dataAtual.getFullYear();
     var mes = dataAtual.getMonth()+1;
@@ -45,23 +47,31 @@ export const  Home=() =>{
                 "id": 1,
                 "nome": "agua", 
                 "valor":  347, 
-                "tipo": 3
+                "tipo": 1
             }, 
             {
                 "id": 2,
                 "nome": "luz", 
                 "valor":  150.58, 
-                "tipo": 3
+                "tipo": 1
             },
             {
                 "id": 3,
                 "nome": "telefone", 
                 "valor":  75, 
-                "tipo": 3
+                "tipo": 1
+            },
+            {
+                "id": 4,
+                "nome": "Salario", 
+                "valor":  1100, 
+                "tipo": 2
             }
 
 
         ]
+        setData(valores);
+        console.log( data );
     };
 
     useEffect (() => {
@@ -76,6 +86,24 @@ export const  Home=() =>{
             <p>Mes Atual: {dataView.mes}</p>
             <button type="button" onClick={()=>anterior()} >Anterior</button>
             <button type="button" onClick={()=>proximo()} >Proximo</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID </th><th>Nome </th><th>Valor</th><th>Tipo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map(item => (
+                        <tr>
+                            <td>{item.id}</td>
+                            <td>{item.nome}</td>
+                            <td>{item.valor}</td>
+                            <td>{item.tipo}</td>
+                        </tr>
+                    ))}
+
+                </tbody>
+            </table>
         </div>
     );
 }
