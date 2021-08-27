@@ -1,6 +1,3 @@
-NAO ESTOU TRAZENDO A PASTA
-node_modules
-MAS TEM AS INSTRUÇOES DE COMO INSTALAR 
 https://github.com/IsabelBoaventura/Celke.git
 
 
@@ -78,6 +75,82 @@ não precisa add o index.js,  o sistema ja descobre sozinho
 
 Aula 01 - Como Criar front-end do sistema Financeiro  com React 
 [[ 18 minutos de video ]]
+
+
+iniciar 
+
+>>> npm start 
+
+
+
+vamos trabalhar  na pagina home 
+
+src / pages / Home/index.js 
+
+Eu ja havia trabalhado com o mes e ano, função anterior e atual
+Agora listar valores. 
+
+
+ useEffect (() => {
+        listarExtrato();
+
+    }, []);
+
+Esta parte também já foi trabalhada.
+
+async -> javascript nao aguarda termino da linha , irá para a próxima instrução 
+ 
+var valores no futuro fira do banco ou ooutro lugar.
+
+tipo dentro da variavel valor , indica se é um pagamento  ou um recebimento
+e tipo == 2  - refere- se a recebimento
+
+
+criar uma constante para receber os valores 
+
+
+const [data<<<< isto é o nome, setData <<<< isto é como será chamada ] = useState([] <<< isto indica que será um array de objeto);
+
+
+setData será utilizado para setar ( reiniciar????) os valores que estao dentro da variável valores
+
+
+vamos criar a tabela para apresentar os valores 
+
+Apresentação do conteudo:
+
+<tbody>
+                    {data.map(item => (
+                        <tr>
+                            <td>{item.id}</td>
+                            <td>{item.nome}</td>
+                            <td>{item.valor}</td>
+                            <td>{item.tipo}</td>
+                        </tr>
+                    ))}
+
+                </tbody>
+
+
+Tanto  no meu como no do exercicio , esta atribuindo os valores mas esta mostrando erro 
+
+Esta é a minha mensagem de erro:
+
+"src\pages\Home\index.js
+  Line 80:8:  React Hook useEffect has a missing dependency: 'listarExtrato'. Either include it or remove the dependency array  react-hooks/exhaustive-deps"
+
+
+
+Parando em 44 minutos 
+
+Aula 01 - Como Criar front-end do sistema Financeiro  com React 
+[[ 44 minutos de video ]]
+
+
+
+
+
+
 
 
 
