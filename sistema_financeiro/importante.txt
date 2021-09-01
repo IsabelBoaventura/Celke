@@ -146,6 +146,30 @@ Parando em 44 minutos
 Aula 01 - Como Criar front-end do sistema Financeiro  com React 
 [[ 44 minutos de video ]]
 
+Apresenta erro,  mas o erro esta informando que para cada registro deve haver uma chave unica 
+Dentro do TR adicionar o atributo KEY ,  e este atributo deve receber algum valor  , e este valor deve ser unico
+Com o o ID também é unico , pode se usar ele . 
+
+NO meu continua a aparecer a linha de erro, se referindo ao useEffect e listarExtrato 
+
+
+
+Aula 1.01 Como criar Layuot do Front end com React
+
+
+css como compronemete 
+
+
+npm styled component
+
+https://styled-components.com/
+
+
+Documentation -> Basics 
+Aula 1.01 Como criar Layuot do Front end com React
+
+
+
 
 
 
