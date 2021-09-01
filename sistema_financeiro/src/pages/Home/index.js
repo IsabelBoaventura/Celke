@@ -47,25 +47,29 @@ export const  Home=() =>{
                 "id": 1,
                 "nome": "agua", 
                 "valor":  347, 
-                "tipo": 1
+                "tipo": 1,
+                "situacao": 1
             }, 
             {
                 "id": 2,
                 "nome": "luz", 
                 "valor":  150.58, 
-                "tipo": 1
+                "tipo": 1,
+                "situacao": 1
             },
             {
                 "id": 3,
                 "nome": "telefone", 
                 "valor":  75, 
-                "tipo": 1
+                "tipo": 1,
+                "situacao": 2
             },
             {
                 "id": 4,
                 "nome": "Salario", 
                 "valor":  1100, 
-                "tipo": 2
+                "tipo": 2,
+                "situacao": 2
             }
 
 
@@ -89,20 +93,30 @@ export const  Home=() =>{
             <table>
                 <thead>
                     <tr>
-                        <th>ID </th><th>Nome </th><th>Valor</th><th>Tipo</th>
+                        <th>ID </th><th>Nome </th><th>Tipo</th><th>Valor</th><th>Situacao</th>
                     </tr>
                 </thead>
                 <tbody>
                     {data.map(item => (
-                        <tr>
+                        <tr key={item.id}>
                             <td>{item.id}</td>
                             <td>{item.nome}</td>
+                            
+                            <td>{item.tipo === 1?<p>Pagamento</p>:<p>Recebimento</p>}</td>
                             <td>{item.valor}</td>
-                            <td>{item.tipo}</td>
+                            <td>{item.situacao === 1? <p>Efetuado</p>:<p>Pendente</p>}</td>
                         </tr>
                     ))}
 
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td></td>                       
+                        <td><b>R$ 2.500,00</b></td> 
+                        <td>valor aleatorio.</td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     );
