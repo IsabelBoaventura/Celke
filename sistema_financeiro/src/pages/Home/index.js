@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import {Container, ConteudoTitulo, Titulo, ButtonSuccess, BotaoAcao, BotaoAntProx, ButtonPrimary } from '../../styles/custom_adm';
+
 export const  Home=() =>{
 
     const [data, setData] = useState([]);
@@ -83,13 +85,23 @@ export const  Home=() =>{
 
     }, []);
     return (
-        <div>
+        
+        <Container>
             <h1>Pagina Home </h1>
-            <h2>Listar Situacao Financeira</h2>
+            <ConteudoTitulo>            
+                <Titulo>Listar Situacao Financeira</Titulo>
+                <BotaoAcao>
+                    <ButtonSuccess>Cadastrar </ButtonSuccess>
+                </BotaoAcao>                
+            </ConteudoTitulo>          
+            
+            <BotaoAntProx>                
+                <ButtonPrimary onClick={()=>anterior()} >Anterior</ButtonPrimary>
+                <ButtonPrimary onClick={()=>proximo()} >Proximo</ButtonPrimary>
+            </BotaoAntProx>
             <p>Ano Atual: {dataView.ano}</p>
-            <p>Mes Atual: {dataView.mes}</p>
-            <button type="button" onClick={()=>anterior()} >Anterior</button>
-            <button type="button" onClick={()=>proximo()} >Proximo</button>
+                <p>Mes Atual: {dataView.mes}</p>
+           
             <table>
                 <thead>
                     <tr>
@@ -118,6 +130,6 @@ export const  Home=() =>{
                     </tr>
                 </tfoot>
             </table>
-        </div>
+        </Container>
     );
 }
