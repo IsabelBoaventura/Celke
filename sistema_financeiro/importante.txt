@@ -165,8 +165,54 @@ npm styled component
 https://styled-components.com/
 
 
-Documentation -> Basics 
+Documentation -> Basics -> installation 
 Aula 1.01 Como criar Layuot do Front end com React
+
+
+ctrl + c 
+para pousar  o servidor 
+npm install --save styled-components
+
+instalando a dependência utilizada para transformar o CSS em componentes 
+
+
+Agora no sistema que esta sendo criado  
+Dentro do Diretorio src
+criar diretorio STYLES
+dentro do diretorio STYLES criar o arquivo CUSTOM_ADM.JS
+src/styles/custom_adm.js
+para customizar a parte admininistrativa de nosso site. 
+
+é js para criar o css em componentes
+
+importar o componentes instalado
+
+criar constante com o nome do componentes
+
+exportar estqa constante;
+
+
+importar este componente na página index.js 
+src/pages/Home/index.js
+
+'Container' que é a contante do style irá para o index.js e irá substiruir a <div>
+
+personalizar o titulo
+Nome de componentes SEMPRE a primeira letra em maiusculo 
+
+exportar os novos componentes também; 
+Onde tem H1 trocar por <Titulo> e </Titulo>
+
+
+
+Aula 1.01 Como criar Layuot do Front end com React
+[[ 18 minutos de video ]]]
+
+
+
+
+
+
 
 
 
