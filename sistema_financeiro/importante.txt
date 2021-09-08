@@ -74,7 +74,7 @@ não precisa add o index.js,  o sistema ja descobre sozinho
 
 
 Aula 01 - Como Criar front-end do sistema Financeiro  com React 
-[[ 18 minutos de video ]]
+
 
 
 iniciar 
@@ -144,7 +144,7 @@ Esta é a minha mensagem de erro:
 Parando em 44 minutos 
 
 Aula 01 - Como Criar front-end do sistema Financeiro  com React 
-[[ 44 minutos de video ]]
+
 
 Apresenta erro,  mas o erro esta informando que para cada registro deve haver uma chave unica 
 Dentro do TR adicionar o atributo KEY ,  e este atributo deve receber algum valor  , e este valor deve ser unico
@@ -206,7 +206,107 @@ Onde tem H1 trocar por <Titulo> e </Titulo>
 
 
 Aula 1.01 Como criar Layuot do Front end com React
-[[ 18 minutos de video ]]]
+
+
+Dentro da tag span , para abrir javascript foi considerado quando abriu  '{' e '}' sendo como abrindo javascript 
+
+
+
+
+Deve ser completado o style do sistema
+
+Aula 2 Como criar Back-end do Sistema Financeiro com Node.js
+
+
+
+Como integrar o node com  o b anco  
+
+cria nova pasta backend_Financeiro antes da pasta 'sistema_financeiro'
+
+abrir com o vscode 
+
+>>>> npm init 
+
+>>>> npm install express 
+
+pode dar 'ENTER'até o final 
+
+
+vai criar o arquivo package.json,   que ira conter as informações do inicio da instalacao
+
+
+para rodar o projeto
+>>>> node app.js
+
+
+E:\Freeline\Web\sistema\www\php7app\Celke\semana_imersao_nove\backend_Financeiro
+Aula 2 Como criar Back-end do Sistema Financeiro com Node.js
+
+
+
+get -> listar  e visualizar
+
+http://localhost:8080 
+
+Cannot GET 
+Significa que nao encontrou a rota
+
+http://localhost:8080/listar
+com isto encontrou e mostrou na tela 
+
+"Extrato Financeiro"
+
+conteudo do app.get
+
+ctrl + c ( parar )
+node app.js ( reiniciar  - restatar ) 
+
+Dependencia para o servidor reiniciar , sem a nossa ajuda 
+
+nodemon
+
+https://www.npmjs.com/package/nodemon
+Instalar o Módulo para reiniciar o servidor sempre que houver alterações no Código fonte, *g* significa globalmente
+
+
+>>>> npm install -g nodemon
+
+
+-g de forma global 
+
+Instalar na máquina e no projeto ( terninal do vscode e cmd pasta c)
+Reiniciar o pc,  após este comando 
+
+
+Rodar o projeto utilizando o comando  
+
+>>>> nodemon app.js
+
+E:\Freeline\Web\sistema\www\php7app\Celke\semana_imersao_nove\backend_Financeiro
+Aula 2 Como criar Back-end do Sistema Financeiro com Node.js
+[[ 15 minutos de video ]]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

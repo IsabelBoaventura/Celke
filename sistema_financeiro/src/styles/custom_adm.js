@@ -77,3 +77,30 @@ export const ButtonSuccess2  = styled.button`
 export const BotaoAcao = styled.section`
    margin: 5px;
 `;
+
+export const Table = styled.table`
+   margin-top: 15px; 
+   width: 100%;
+   th{
+      background-color: #007281;
+      color: #f1f1f1;
+      padding: 10px;
+   }
+   td{
+      background-color: #f6f6f6;
+      color: #3e3e3e;
+      padding: 6px;
+   }
+`;
+
+
+export const TextDanger = styled.span`
+   color: #B22222; //red;
+`;
+
+
+
+
+export const TextSuccess = styled.span`
+   color: #0000FF;
+`;

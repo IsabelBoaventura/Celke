@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import {Container, ConteudoTitulo, Titulo, ButtonSuccess, BotaoAcao, BotaoAntProx, ButtonPrimary } from '../../styles/custom_adm';
+import {Container, ConteudoTitulo, Titulo, ButtonSuccess, BotaoAcao, BotaoAntProx, ButtonPrimary, Table, TextDanger, TextSuccess} from '../../styles/custom_adm';
 
 export const  Home=() =>{
 
@@ -97,12 +97,13 @@ export const  Home=() =>{
             
             <BotaoAntProx>                
                 <ButtonPrimary onClick={()=>anterior()} >Anterior</ButtonPrimary>
+                <span>{ dataView.mes + "/" + dataView.ano}</span>
                 <ButtonPrimary onClick={()=>proximo()} >Proximo</ButtonPrimary>
             </BotaoAntProx>
             <p>Ano Atual: {dataView.ano}</p>
-                <p>Mes Atual: {dataView.mes}</p>
+            <p>Mes Atual: {dataView.mes}</p>
            
-            <table>
+            <Table>
                 <thead>
                     <tr>
                         <th>ID </th><th>Nome </th><th>Tipo</th><th>Valor</th><th>Situacao</th>
@@ -114,9 +115,9 @@ export const  Home=() =>{
                             <td>{item.id}</td>
                             <td>{item.nome}</td>
                             
-                            <td>{item.tipo === 1?<p>Pagamento</p>:<p>Recebimento</p>}</td>
+                            <td>{item.tipo === 1?<TextDanger>Pagamento</TextDanger>:<TextSuccess>Recebimento</TextSuccess>}</td>
                             <td>{item.valor}</td>
-                            <td>{item.situacao === 1? <p>Efetuado</p>:<p>Pendente</p>}</td>
+                            <td>{item.situacao === 1? <span>Efetuado</span>:<span>Pendente</span>}</td>
                         </tr>
                     ))}
 
@@ -124,12 +125,13 @@ export const  Home=() =>{
                 <tfoot>
                     <tr>
                         <td>Total</td>
-                        <td></td>                       
+                        <td></td> 
+                        <td></td>                      
                         <td><b>R$ 2.500,00</b></td> 
-                        <td>valor aleatorio.</td>
+                        <td>*valores aleatorios*</td>
                     </tr>
                 </tfoot>
-            </table>
+            </Table>
         </Container>
     );
 }
