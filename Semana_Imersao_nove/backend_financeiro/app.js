@@ -5,12 +5,15 @@ const express = require('express');
 const app = express();
 //quando houver a necessidade de criar rotas, será a const app que será utilizada
 // ou iniciar um servidor 
+
+
+const db = require('./models/db.js');
  
 app.get('/listar', (req, res) => {
     // '/listar' é uma rota que esta recebendo uma funcao 
     // modelo da funcao será  'Arrow functions'
 
-  res.send("Extrato Financeiro test ");
+  res.send("Extrato Financeiro teste 09/09/2021 ");
   //o que aparecerá na tela , quando esta rota for chamada 
 });
 
