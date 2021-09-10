@@ -1,0 +1,447 @@
+https://github.com/IsabelBoaventura/Celke.git
+
+
+…or create a new repository on the command line
+echo "# Celke" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/IsabelBoaventura/Celke.git
+git push -u origin main
+a
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/IsabelBoaventura/Celke.git
+git branch -M main
+git push -u origin main
+
+
+
+
+
+SEQUENCIA PARA CRIAR O PROJETO
+
+precisa ter o Node instalado
+lembrando que quando se instala pela primeira vez ,tem de fechar e abrir de novo o arquivo onde esta verificando que ele esta instalado
+no caso 'cmd';
+
+toda a vez que for iniciar o projeto, rodar:
+>>>>>   npm start
+
+
+Criar o projeto React
+
+### npx create-react-app my-app
+
+Acessar o diretório do projeto
+### cd my-app
+eu prefiro entrar na pasta direto
+
+para abrir o projeto no VSCode, eu prefiro, dentro da pasta
+na linha de cima, onde aparece o endereço digitar "cmd"
+irá abrir o terminal
+com o terminal aberto,  e estando dentro da pasta de trabalho
+digito o comando para abrir o VSCode
+###  code .
+
+
+### npm start 
+irá abrir no navegador uma nova guia mostrando o trabalho 
+
+
+Será usada a dependencia React Router
+###  npm install react-router-dom
+Gerenciador das rotas 
+
+
+ctrl + C 
+para pausar o servidor 
+
+Reinicia o projeto
+
+Rota, endereço para acessar determinada pagina 
+
+Dentro do src , criar o diretório 'Pages'
+Dentro do Diretório Pages, criar o diretório Home
+Dentro do Diretório Home, criar o arquivo chamado 'index.js'
+Incluir este arquivo : "import { Home } from './pages/Home/index.js';"
+não precisa add o index.js,  o sistema ja descobre sozinho 
+
+
+
+
+
+
+Aula 01 - Como Criar front-end do sistema Financeiro  com React 
+
+
+
+iniciar 
+
+>>> npm start 
+
+
+
+vamos trabalhar  na pagina home 
+
+src / pages / Home/index.js 
+
+Eu ja havia trabalhado com o mes e ano, função anterior e atual
+Agora listar valores. 
+
+
+ useEffect (() => {
+        listarExtrato();
+
+    }, []);
+
+Esta parte também já foi trabalhada.
+
+async -> javascript nao aguarda termino da linha , irá para a próxima instrução 
+ 
+var valores no futuro fira do banco ou ooutro lugar.
+
+tipo dentro da variavel valor , indica se é um pagamento  ou um recebimento
+e tipo == 2  - refere- se a recebimento
+
+
+criar uma constante para receber os valores 
+
+
+const [data<<<< isto é o nome, setData <<<< isto é como será chamada ] = useState([] <<< isto indica que será um array de objeto);
+
+
+setData será utilizado para setar ( reiniciar????) os valores que estao dentro da variável valores
+
+
+vamos criar a tabela para apresentar os valores 
+
+Apresentação do conteudo:
+
+<tbody>
+                    {data.map(item => (
+                        <tr>
+                            <td>{item.id}</td>
+                            <td>{item.nome}</td>
+                            <td>{item.valor}</td>
+                            <td>{item.tipo}</td>
+                        </tr>
+                    ))}
+
+                </tbody>
+
+
+Tanto  no meu como no do exercicio , esta atribuindo os valores mas esta mostrando erro 
+
+Esta é a minha mensagem de erro:
+
+"src\pages\Home\index.js
+  Line 80:8:  React Hook useEffect has a missing dependency: 'listarExtrato'. Either include it or remove the dependency array  react-hooks/exhaustive-deps"
+
+
+
+Parando em 44 minutos 
+
+Aula 01 - Como Criar front-end do sistema Financeiro  com React 
+
+
+Apresenta erro,  mas o erro esta informando que para cada registro deve haver uma chave unica 
+Dentro do TR adicionar o atributo KEY ,  e este atributo deve receber algum valor  , e este valor deve ser unico
+Com o o ID também é unico , pode se usar ele . 
+
+NO meu continua a aparecer a linha de erro, se referindo ao useEffect e listarExtrato 
+
+
+
+Aula 1.01 Como criar Layuot do Front end com React
+
+
+css como compronemete 
+
+
+npm styled component
+
+https://styled-components.com/
+
+
+Documentation -> Basics -> installation 
+Aula 1.01 Como criar Layuot do Front end com React
+
+
+ctrl + c 
+para pousar  o servidor 
+npm install --save styled-components
+
+instalando a dependência utilizada para transformar o CSS em componentes 
+
+
+Agora no sistema que esta sendo criado  
+Dentro do Diretorio src
+criar diretorio STYLES
+dentro do diretorio STYLES criar o arquivo CUSTOM_ADM.JS
+src/styles/custom_adm.js
+para customizar a parte admininistrativa de nosso site. 
+
+é js para criar o css em componentes
+
+importar o componentes instalado
+
+criar constante com o nome do componentes
+
+exportar estqa constante;
+
+
+importar este componente na página index.js 
+src/pages/Home/index.js
+
+'Container' que é a contante do style irá para o index.js e irá substiruir a <div>
+
+personalizar o titulo
+Nome de componentes SEMPRE a primeira letra em maiusculo 
+
+exportar os novos componentes também; 
+Onde tem H1 trocar por <Titulo> e </Titulo>
+
+
+
+Aula 1.01 Como criar Layuot do Front end com React
+
+
+Dentro da tag span , para abrir javascript foi considerado quando abriu  '{' e '}' sendo como abrindo javascript 
+
+
+
+
+Deve ser completado o style do sistema
+
+Aula 2 Como criar Back-end do Sistema Financeiro com Node.js
+
+
+
+Como integrar o node com  o b anco  
+
+cria nova pasta backend_Financeiro antes da pasta 'sistema_financeiro'
+
+abrir com o vscode 
+
+>>>> npm init 
+
+>>>> npm install express 
+
+pode dar 'ENTER'até o final 
+
+
+vai criar o arquivo package.json,   que ira conter as informações do inicio da instalacao
+
+
+para rodar o projeto
+>>>> node app.js
+
+
+E:\Freeline\Web\sistema\www\php7app\Celke\semana_imersao_nove\backend_Financeiro
+Aula 2 Como criar Back-end do Sistema Financeiro com Node.js
+
+
+
+get -> listar  e visualizar
+
+http://localhost:8080 
+
+Cannot GET 
+Significa que nao encontrou a rota
+
+http://localhost:8080/listar
+com isto encontrou e mostrou na tela 
+
+"Extrato Financeiro"
+
+conteudo do app.get
+
+ctrl + c ( parar )
+node app.js ( reiniciar  - restatar ) 
+
+Dependencia para o servidor reiniciar , sem a nossa ajuda 
+
+nodemon
+
+https://www.npmjs.com/package/nodemon
+Instalar o Módulo para reiniciar o servidor sempre que houver alterações no Código fonte, *g* significa globalmente
+
+
+>>>> npm install -g nodemon
+
+
+-g de forma global 
+
+Instalar na máquina e no projeto ( terninal do vscode e cmd pasta c)
+Reiniciar o pc,  após este comando 
+
+
+Rodar o projeto utilizando o comando  
+
+>>>> nodemon app.js
+
+E:\Freeline\Web\sistema\www\php7app\Celke\semana_imersao_nove\backend_Financeiro
+Aula 2 Como criar Back-end do Sistema Financeiro com Node.js
+[[ 15 minutos de video ]]]
+
+
+Banco de Dados mysql 
+
+MySQLWorkbench 
+
+Programa para gerenciar o banco de Dados de forma grafica 
+no prompt de comando:
+
+mysql -u root -p
+(senha)
+
+mysql  a partir da versao 8
+
+criar uma base de dados 
+
+CREATE DATABASE celke character set utf8mb4 collate utf8mb4_unicode_ci
+
+Conectar o projeto com o banco de dados 
+
+Dependencia para fazer a uniao do banco de Dados com o nosso sistema 
+
+SEQUELIZE 
+http://sequelize.org/
+
+$ npm install --save sequelize
+>>>> npm install --save sequelize
+
+https://sequelize.org/master/
+
+Sequelize é uma biblioteca javascript que facilita o gerenciamento de um banco de dados SQL 
+
+agora acrescentar a Dependencia do Banco de Dados 
+
+>>>>> npm install --save mysql2
+
+Depois de instaladas as Dependencias 
+Entramos no sistema e iremos criar um novo diretorio 'models', dentro deste diretório criaremos o arquivo db.js
+
+E:\Freeline\Web\sistema\www\php7app\Celke\semana_imersao_nove\backend_Financeiro\models
+
+Neste arquivo implementaremos a conexao com o banco de dados 
+Na Documentacao do sequelize tem como fazer 
+
+
+Depois de criado as credenciais  e a exportacao no db.js, pode voltar para o arquivo app , para importar estas informações 
+
+A informação de que houve conexao com o banco, apareceu no terminal, mas não apareceu no console da pagina aberta.
+
+Com a conexao realizada, será criada uma 'models' para cadastrar e selecionar as informações cadastradas
+
+dentro do models criar 'Extrato.js'
+
+MODELS  - recebe, manipula e salva os dados no banco de dados.
+recebe, salva, pesquisa, altera valores no banco de dados
+
+No arquivo do Sequelize.org há as informações de Model Basics 
+Seguindo os passos do arquivo tens como criar a primeira Models
+
+
+const Extrato = db.define('extratos', {
+    id : {
+        type: Sequelize.INTEGER, 
+        autoIncrement: true, 
+        allowNull: false, 
+        primaryKey: true
+    }, 
+    nome: {
+        type: Sequelize.STRING,        
+        allowNull: false, 
+    }, 
+    valor: {
+        type: Sequelize.DOUBLE,        
+        allowNull: false, 
+    },
+    //Tipo 1 == Pagamento 
+    //Tipo 2 == Recebimento
+    tipo: {
+        type: Sequelize.INTEGER,        
+        allowNull: false, 
+    },
+    // se já foi quitada , ou esta pendente
+    //Tipo 1 == Pago 
+    //Tipo 2 == Pendente
+    situacao:{
+        type: Sequelize.INTEGER, 
+        allowNull: true
+        //indica que não é obrigatório ter esta informacao no banco
+    }
+
+});
+
+Tabela que será criada no banco de Dados 
+
+MODELS SYNCHRONIZATION
+Synchronizing  all models at once
+
+Com o sync iremos dizer ao sistema que ele irá criar a tabela
+
+
+User é o nome da tabela de exemplo
+User.sync() - Isso cria a tabela se ela não existir (e não faz nada se já existir)
+User.sync({ force: true }) - Isso cria a tabela, descartando-a primeiro se ela já existia
+User.sync({ alter: true }) - Isso verifica qual é o estado atual da tabela no banco de dados (quais colunas ela possui, quais são seus tipos de dados, etc.) e, em seguida, realiza as alterações necessárias na tabela para torná-la compatível com o modelo.
+ 
+
+
+
+E:\Freeline\Web\sistema\www\php7app\Celke\semana_imersao_nove\backend_Financeiro
+Aula 2 Como criar Back-end do Sistema Financeiro com Node.js
+[[ 36 minutos de video ]]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

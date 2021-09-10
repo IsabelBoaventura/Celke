@@ -7,13 +7,14 @@ const app = express();
 // ou iniciar um servidor 
 
 
-const db = require('./models/db.js');
+//const db = require('./models/db.js');
+//excluido daqui, pois o 'Extrato.js' agora será o responsável por trabalhar com o banco 
  
 app.get('/listar', (req, res) => {
     // '/listar' é uma rota que esta recebendo uma funcao 
     // modelo da funcao será  'Arrow functions'
 
-  res.send("Extrato Financeiro teste 09/09/2021 ");
+  res.send("Extrato Financeiro teste 10/09/2021 ");
   //o que aparecerá na tela , quando esta rota for chamada 
 });
 

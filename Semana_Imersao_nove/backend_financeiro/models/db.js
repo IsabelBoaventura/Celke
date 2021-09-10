@@ -13,6 +13,16 @@ const sequelize =  new Sequelize( bancoDeDados  ,  usuario , senha, {
 
 });
 
+//para verificar se esta acontecendo a conexão com o banco de dados 
+sequelize.authenticate()
+    .then(function(){
+        console.log("Sucesso");
+    }).catch(function(err){
+        console.log("Falha na Conexao " + err);
+});
+
+//esta é a verificação de conexao com o banco, recomendado nao ter no sistema em producao
+
 
 //para usar tem de exportar as credenciais 
 module.exports = sequelize;
