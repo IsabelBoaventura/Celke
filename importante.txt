@@ -579,6 +579,32 @@ Aula 2 Como criar Back-end do Sistema Financeiro com Node.js
 [[ 1 hora : 06 minutos de video ]]]
 
 
+Agoras o listar por mês e ano 
+Dentro do app.js 
+
+app.get('/listar/:mes/:ano', 
+
+Faz a requisição no Insomnia
+No Insomnia trouxe todos os registros 
+No Console log mostrou  o mês e o ano  que estava buscando 
+
+
+Buscar o primeiro e o ultimo dia do mes /ano para buscar os lançamentos no banco de dados
+
+Esta buscando de forma ordenada por DataVencimento
+
+Vamos acrescentar uma condição  para a busca
+Sequelize  => Querie Basics =>  Applying WHERE clauses 
+
+OP para quando quer usar com Operadores ( and, or , between , ... )
+
+
+E:\Freeline\Web\sistema\www\php7app\Celke\semana_imersao_nove\backend_Financeiro
+Aula 2 Como criar Back-end do Sistema Financeiro com Node.js
+[[ 1 hora : 20 minutos de video ]]]
+
+
+
 
 
 
