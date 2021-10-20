@@ -604,6 +604,132 @@ Aula 2 Como criar Back-end do Sistema Financeiro com Node.js
 [[ 1 hora : 20 minutos de video ]]]
 
 
+Nos meus testes a data não esta ficando correta, mesmo assim vou deixar como esta no video( mesmo com a data incorreta ) 
+
+
+Agora vamos somar os valores do que foi recebido e do que foi quitado no periodo.
+Adicionado a soma dos Vencidos no Periodo.
+Agora somar os recebimentos
+
+
+Fazer o Cálculo do que foi recebido contra o valor a ser quitado.
+Primeiro converter para numeros  new Number ()
+const saldo = new Number(  valorReceberQuitados ) - new Number(valorPagamentos)  ;
+  // o que tenho  menos o que devo
+
+Esta com o saldo errado, mas sem problema, pois compreendi o conceito  das funções. 
+no meu caso , quando eu refiz os calculos, no meu calculo ficou errado, pois nao coloquei a situacao em todos 
+Tem de ser visto algo como: "se a situação estiver null";
+
+
+Back- end e Front - end funcionando,  próxima aula integrar Frond-end com Back-end
+
+
+---------------------------------
+
+Aula 3 Como integrar Back-end com Frond-end, React e Node.js
+
+Para integrar, precisaremos de algumas dependências, para o Back-end aceitar as requisições do Frond-end, pois no momento o Back-end,  esta aceitando as requisições apenas através do Insomnia.
+
+
+Dependência CORS
+
+npm cors
+https://www.npmjs.com/package/cors
+Permitir acesso a API
+>>>>> npm install  --save cors
+
+Será instalado no Back-End 
+
+
+importar o cors no projeto, parte superior do  app.js , após a importação do sequelaze, seguir como esta na documentação da biblioteca
+ const cors = require('cors');
+ const express = require('express');
+express que é exigencia da documentação,  já estava sendo usado no sistema, sendo assim,  apenas passamos para baixo do cors;
+
+rodar o cors:
+app.use(cors());
+adicionado após o comando json;
+
+
+personalizar como será acessado nossa app;
+
+middle -é  executado antes de executar as demais funções, se não houver erros , irá continuar o processamento das demais execuções;
+res.header("Access-Control-Allow-Origin", "*"); 
+segunda opção é para indicar qual a url terá acesso ao sistema, se for colocado "*" irá indicar que qualquer URL poderá fazer esta requisição;
+
+Agora informar quais são os métodos que serão usados para acesso:
+res.header("Access-Control-Methods", "GET, PUT, POST, DELETE");
+
+Configuração do Cabeçalho:
+res.header("Access-Control-Headers", "X-PINGOTHER, Content-Type, Authorization");
+X-PINGOTHER - 
+
+app use cors é adicionado dentro desta função;
+Caso não ocorras erros,  continue  o processamento, caso contrário, irá parar.
+
+API configurada para receber requisições;
+
+
+Agora no  **** FRONT-END ******
+
+Irá precisar da dependência axios 
+https://www.npmjs.com/package/axios
+
+Realizar chamadas para a API
+>>>>>> $ npm install axios
+
+>>>> npm install --save axios 
+
+Agora criar um diretório dentro do src 
+src => config => (arquivo ) configApi.js
+neste arquivo será informada as credenciais do aplicativo, aqui estará as rotas para acesso.
+Neste momento fica assim:
+
+import axios from 'axios';
+
+export default axios.create({
+    baseURL: 'http://localhost:8080'
+});
+
+
+Agora em src => pages => index.js 
+iremos importar a conexao com a API 
+import api from '../../config/configApi';
+Assim gera as credenciais da API 
+
+Na parte de listarExtratos, onde há os valores fixos, eles serão apagados , para serem substituidos por valores do banco;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+E:\Freeline\Web\sistema\www\php7app\Celke\semana_imersao_nove\backend_Financeiro
+Aula 3 Como integrar Back-end com Frond-end, React e Node.js
+[[ 13  minutos  ]]]
+
+
+
+
+
+
+
+
+
+
 
 
 
