@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Container, ConteudoTitulo, Titulo, ButtonSuccess, BotaoAcao, BotaoAntProx, ButtonPrimary, Table, TextDanger, TextSuccess} from '../../styles/custom_adm';
+import api from '../../config/configApi';
 
 export const  Home=() =>{
 
