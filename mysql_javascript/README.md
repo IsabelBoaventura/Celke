@@ -1,3 +1,12 @@
+# Teste para Projeto 
+
+Teste para implementar o Projeto `planilha_freeline`. 
+Esta documentação esta sem nenhuma regra,  mas por enquanto preciso que fique registrado o passo_a_passo, com o tempo vou adicionando as regras e escrevendo corretamente.
+
+Projeto principal deve usar: HTML, CSS, Javascript e Banco de Dados. 
+
+
+
 Instalar o Mysql para gerenciar o banco de dados; 
 Tenho o Wamp  portanto eu já tenho, mesmo assim  vou ir no passo a passo.
 
@@ -15,7 +24,7 @@ No thanks, just start my download.
 
 Mysql Server 8.0.28
 
-senha: 123456
+senha: `123456`
 
 Mysql nas Variaveis de ambiente
 finish -> next -> finish 
@@ -38,44 +47,44 @@ cmd
 (-u: para mostrar o usuario ) 
 ( -p -  para pedir a senha ) 
 
- ==>>> mysql -h localhost -u root -p
+ #### mysql -h localhost -u root -p
 pedira a senha 
 
 acessou o banco de dados uhul
 
 para ver os bancos de dados 
 
-===>>>> SHOW DATABASES;
+#### SHOW DATABASES;
 
 Tem apenas as bases padrão sem as nossas que foram criadas antes; 
 
 
 criar base de dados 
 
-====>>>>> CREATE DATABASE nome_do_banco_de_dados;
+#### CREATE DATABASE nome_do_banco_de_dados;
 
 
 acessar a base de dados
-==>>>>> USE celke;
+#### USE celke;
 
 resposta "Database changed"
 
 criar uma tabela
-=>>>> CREATE TABLE users ( nome VARCHAR(150), email VARCHAR(100));
+#### CREATE TABLE users ( nome VARCHAR(150), email VARCHAR(100));
 
 
 Lembre se de finalizar sempre com ';'
 
 para ver as tabelas existentes
->>>>> SHOW TABLES;
+#### SHOW TABLES;
 
 inserir valores no banco de dados:
 
->>>> INSERT INTO users (nome, email) VALUES ('Cesar' , 'cesar@email.com');
+####  INSERT INTO users (nome, email) VALUES ('Cesar' , 'cesar@email.com');
 
 
 Selecionar as informações do banco de Dados
->>>>> SELECT * FROM users; 
+#### SELECT * FROM users; 
 
 para sair digite >>>> exit 
 
@@ -144,6 +153,9 @@ ALTER SCHEMA `celke`  DEFAULT CHARACTER SET utf8  DEFAULT COLLATE utf8_unicode_c
 
 ---------------------
 
+Mais testes
+====================
+
 Agora vamos para o sistema que devemos criar 
 
 Node.js #7 - Node + MySQL + Workbench - Como conectar o Node com banco de dados
@@ -192,7 +204,8 @@ Instalar o Express
 https://expressjs.com/
 
 Instalar com npm 
->>>>>>> npm install express --save 
+
+#### npm install express --save 
 $ npm install express --save
 neste momento cria o diretorio >>> node_modules 
 contendo os aquivos solicitados 
@@ -229,7 +242,7 @@ node index.js ( para reiniciar )
 instalar nodemon
 https://www.npmjs.com/package/nodemon
 
->>>>>> npm install -g nodemon
+####  npm install -g nodemon
 
 ****************
 *
@@ -291,26 +304,7 @@ na parte que que antes buscava uma frase/string agora ira buscar um arquivo
 antes: 'res.send("Pagina do Gerenciador");'
 agora: 'res.sendFile(__dirname + "/src/index.html");'
 
+Até aqui a nossa pagina de teste , esta abrindo no navegador,  apenas com localhost:8080. 
 
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Agora ir para os próximos passos.
 
