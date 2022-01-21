@@ -308,3 +308,73 @@ Até aqui a nossa pagina de teste , esta abrindo no navegador,  apenas com local
 
 Agora ir para os próximos passos.
 
+A partir daqui adicionar no readme.md
+
+Estamos no video 07
+
+Node.js #7 - Node + MySQL + Workbench - Como conectar o Node com banco de dados
+
+	https://www.youtube.com/watch?v=5JnPd_YckQw&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=7
+
+Instalar o MYSQL 
+
+Depois de instalar e adicionar na Variável de ambiente, abrir e trabalhar no prompt de Comando
+
+#### mysql -h localhost -u root -p
+( -h onde esta o banco de dados )
+( -u para o usuário)
+( -p  para a senha )
+
+#### SHOW DATABASES;
+Para mostrar todas as bases de dados criadas;
+
+#### CREATE DATABASE celke;
+Para criar uma base de dados, neste caso com o nome 'celke';
+
+#### USE celke;
+Para entrar na tabela
+
+#### CREATE TABLE users (nome VARCHAR(200), email VARCHAR(100));
+Para criar uma tabela com suas colunas,  e o tipo e tamanho de cada uma das colunas. 
+
+
+#### SHOW TABLES;
+Para mostrar as tabelas que existe;
+
+#### INSERT INTO users (nome, email) VALUES ('Cesar' , 'cesar@email.com');
+
+Para inserir valores na tabela.
+
+#### SELECT * FROM users;
+Para mostrar o conteudo da tabela.
+
+
+#### MYSQL WORKBENCH
+
+Agora iremos usar a Ferramenta para gerenciar o banco de dados  de forma gráfica.
+
+## Implementar a Conexão com o Banco de Dados
+
+Com as páginas já existentes, vamos fazer o sistema se comunicar com o banco de Dados.
+
+Instalar a extensão `mysql` 
+Primeiro criar o arquivo `json`.
+
+CMD para o node. 
+#### npm init
+Para criar o arquivo de configuração.
+Apresenta os atributos que devem ser preenchidos.
+o que ficar igual apenas clique em 'enter'
+
+Para o atributo 'test command' (Teste de Comando) usaremos:
+`echo \"Error: no test specified\" && exit 1`
+
+## Extensão MYSQL
+	https://www.npmjs.com/package/mysql
+
+#### npm install mysql
+Por teste iremos usar ( temporariamente ) a conexão com o banco no arquivo principal 'app.js'.
+
+
+
+
