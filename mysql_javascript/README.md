@@ -32,6 +32,7 @@ finish -> next -> finish
 mysql nas variaveis de ambiente
 
 Copiar o endereço de onde esta o executavel 
+
 	C:\Program Files\MySQL\MySQL Server 8.0\bin
 propriedades -> Configurações Avançadas -> Variaveis de ambiente -> Path 
 
@@ -88,11 +89,7 @@ Selecionar as informações do banco de Dados
 
 para sair digite >>>> exit 
 
-
-
-
-------------------------------------
-Agora usando um gerenciador de banco de Dados
+## Agora usando um gerenciador de banco de Dados
 MySQL Workbenck
 
 	https://www.mysql.com/products/workbench/
@@ -105,7 +102,9 @@ MySQL Workbench 8.0.28
 
 baixar e instalar
 
-onde ele ficará instalado: C:\Program Files\MySQL\MySQL Workbench 8.0 CE\
+onde ele ficará instalado: 
+	
+	C:\Program Files\MySQL\MySQL Workbench 8.0 CE\
 
 Mesmo usado no Linux com o Yamada; 
 
@@ -134,27 +133,26 @@ Nos campos de baixo adicione coluna por coluna que terá na tabela adicionando  
 
 Apply -> 
  o sistema mostra o que foi que criou 
-
-CREATE TABLE `celke`.`contas_pagas` (
-  `id_contas_pagas` INT NOT NULL,
-  `nome_contas_pagas` VARCHAR(45) NULL,
-  `valor_contas_pagas` DOUBLE NULL,
-  `contas_pagascol` VARCHAR(45) NULL,
-  PRIMARY KEY (`id_contas_pagas`));
-
+ <pre>
+CREATE TABLE celke.contas_pagas (
+  id_contas_pagas INT NOT NULL,
+  nome_contas_pagas VARCHAR(45) NULL,
+  valor_contas_pagas DOUBLE NULL,
+  contas_pagascol VARCHAR(45) NULL,
+  PRIMARY KEY (id_contas_pagas));
+</pre>
 Apply -> Finish 
 
-ALTER TABLE `celke`.`contas_pagas` 
-CHANGE COLUMN `id_contas_pagas` `id_contas_pagas` INT NOT NULL AUTO_INCREMENT ;
-
+<pre>
+ALTER TABLE celke.contas_pagas 
+CHANGE COLUMN id_contas_pagas id_contas_pagas INT NOT NULL AUTO_INCREMENT ;
+</pre>
 
 Alteração para todo o banco de dados 
 ALTER SCHEMA `celke`  DEFAULT CHARACTER SET utf8  DEFAULT COLLATE utf8_unicode_ci ;
 
----------------------
 
-Mais testes
-====================
+## Mais testes
 
 Agora vamos para o sistema que devemos criar 
 
@@ -201,7 +199,7 @@ Node.js #4 - Como instalar o Express no Node.js e criar rotas no Node.js
 
 Instalar o Express
 
-https://expressjs.com/
+	https://expressjs.com/
 
 Instalar com npm 
 
@@ -220,18 +218,20 @@ novamente no terminal >>>>> node index.js
 
 
 criado outras chamadas de paginas
-http://localhost:8080/blog
+	
+	http://localhost:8080/blog
 
 mesmo fato.
 
 Tutorial 
+	
 	https://www.tutorialspoint.com/nodejs/nodejs_express_framework.htm
 
 
 
 Node.js #5 - Como instalar o Nodemon no Node.js para o servidor ser recarregado automaticamente
 
-https://www.youtube.com/watch?v=76fP9ValZIE&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=5
+	https://www.youtube.com/watch?v=76fP9ValZIE&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=5
 
 instalar nodemon - atualizar automatico do servidor
 para reinciar o servido do node 
@@ -240,31 +240,29 @@ ctrl + c ( para parar )
 node index.js ( para reiniciar )
 
 instalar nodemon
-https://www.npmjs.com/package/nodemon
+
+	https://www.npmjs.com/package/nodemon
 
 ####  npm install -g nodemon
 
-****************
-*
+
 *  nodemon nao instalado no sistema.
-*
-*****************
 
 ocorreu a mesma situação no pc de casa.
 abri um cmd e fiz a mesma coisa,  e deu certo  
-npm install -g nodemon
+####  npm install -g nodemon
 
-nodemon -v
+#### nodemon -v
 2.0.15
 
 pelo terminal do VS Code não funciona
 pelo terminal do CMD funciona.
 
-nodemon index.js
+#### nodemon index.js
 
 uhuu ... faz a modificação no codigo e atualiza a pagina no navegador ... deu certo
 
-
+<pre>
 [nodemon] 2.0.15
 [nodemon] to restart at any time, enter `rs`
 [nodemon] watching path(s): *.*
@@ -276,13 +274,14 @@ uhuu ... faz a modificação no codigo e atualiza a pagina no navegador ... deu 
 [nodemon] starting `node index.js`
 [nodemon] restarting due to changes...
 [nodemon] starting `node index.js`
-
+</pre>
 resposta do cmd , adorei
 
 
 
 Node.js #6 - Como carregar arquivo HTML no Node.js
-https://www.youtube.com/watch?v=2h8jg2cZT1M&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=6
+
+	https://www.youtube.com/watch?v=2h8jg2cZT1M&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=6
 
 
 index.js virá app.js
@@ -291,7 +290,7 @@ o Terminal já informará erro.
 ctrl + c para pausar
 reinicia o 'nodemon' mas agora com o nome do arquivo principal
 
->>>> nodemon app.js
+#### nodemon app.js
 
 no navegor esta tudo ok , sem mudanças. 
 criar o diretorio 'src' e dentro dele o arquivo 'index.html'
@@ -302,6 +301,7 @@ no arquivo app.js, na rota que busca pelo arquivo
 na parte que que antes buscava uma frase/string agora ira buscar um arquivo 
 
 antes: 'res.send("Pagina do Gerenciador");'
+
 agora: 'res.sendFile(__dirname + "/src/index.html");'
 
 Até aqui a nossa pagina de teste , esta abrindo no navegador,  apenas com localhost:8080. 
@@ -321,8 +321,11 @@ Instalar o MYSQL
 Depois de instalar e adicionar na Variável de ambiente, abrir e trabalhar no prompt de Comando
 
 #### mysql -h localhost -u root -p
+
 ( -h onde esta o banco de dados )
+
 ( -u para o usuário)
+
 ( -p  para a senha )
 
 #### SHOW DATABASES;
@@ -367,13 +370,116 @@ Apresenta os atributos que devem ser preenchidos.
 o que ficar igual apenas clique em 'enter'
 
 Para o atributo 'test command' (Teste de Comando) usaremos:
-`echo \"Error: no test specified\" && exit 1`
+\' echo \"Error: no test specified\" && exit 1 \'
 
 ## Extensão MYSQL
 	https://www.npmjs.com/package/mysql
 
 #### npm install mysql
 Por teste iremos usar ( temporariamente ) a conexão com o banco no arquivo principal 'app.js'.
+
+Tanto o nodemon quanto a página não apresentaram erro.
+
+Conforme a Orientação do Manual, passado para o sistema. 
+
+nodemon apresentando o erro
+
+<pre>
+D:\projetos\Celke\mysql-node-javascript>nodemon app.js
+[nodemon] 2.0.15
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node app.js`
+error connecting: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+    at Handshake.Sequence._packetToError (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\protocol\sequences\Sequence.js:47:14)
+    at Handshake.ErrorPacket (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\protocol\sequences\Handshake.js:123:18)
+    at Protocol._parsePacket (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\protocol\Protocol.js:291:23)
+    at Parser._parsePacket (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\protocol\Parser.js:433:10)
+    at Parser.write (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\protocol\Parser.js:43:10)
+    at Protocol.write (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\protocol\Protocol.js:38:16)
+    at Socket.<anonymous> (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\Connection.js:88:28)
+    at Socket.<anonymous> (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\Connection.js:526:10)
+    at Socket.emit (node:events:365:28)
+    at addChunk (node:internal/streams/readable:314:12)
+    --------------------
+    at Protocol._enqueue (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\protocol\Protocol.js:144:48)
+    at Protocol.handshake (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\protocol\Protocol.js:51:23)
+    at Connection.connect (D:\projetos\Celke\mysql-node-javascript\node_modules\mysql\lib\Connection.js:116:18)
+    at Object.<anonymous> (D:\projetos\Celke\mysql-node-javascript\app.js:47:12)
+    at Module._compile (node:internal/modules/cjs/loader:1109:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1138:10)
+    at Module.load (node:internal/modules/cjs/loader:989:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:829:14)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:76:12)
+    at node:internal/main/run_main_module:17:47
+
+</pre>
+
+Este erro se refere a Autorização de usuário.
+Criar um novo Usuário .
+Abra um novo prompt de comando.
+Neste novo CMD iremos configurar o novo usuario.
+
+#### mysql -h localhost -u root -p
+
+Para criar um novo usuario:
+
+#### CREATE USER 'admin_tabela'@'localhost' IDENTIFIED WITH mysql_native_password BY '123456';
+
+Responde com um Query ok e 0 linhas afetadas.
+
+Adicionar o usuario recem criado no sistema e reiniciar o nodemon. 
+Resposta: Erro: Usuario sem permissão no banco de Dados.
+Para adicionar as permissões
+Volte no CMD que estava trabalhando com o MYSQL.
+Adicione:
+#### GRANT ALL PRIVILEGES ON *.* TO 'admin_tabela'@'localhost';
+
+Liberar todos os privilégios para este Usuario.
+Reinicie o nodemon.
+Resposta:
+<pre>
+
+D:\projetos\Celke\mysql-node-javascript>nodemon app.js
+[nodemon] 2.0.15
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node app.js`
+Conectado no ID: 58
+
+</pre>
+
+Conexão realizada com sucesso! uhul
+
+No sistema,  vamos executar uma query para mostrar os dados da tabela, para verificarmos se as informações estão aparecendo. 
+
+<pre>
+D:\projetos\Celke\mysql-node-javascript>nodemon app.js
+[nodemon] 2.0.15
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,json
+[nodemon] starting `node app.js`
+[nodemon] restarting due to changes...
+[nodemon] starting `node app.js`
+Conectado no ID: 62
+[nodemon] starting `node app.js`
+Conectado no ID: 115
+Resultado: [object Object]
+[nodemon] restarting due to changes...
+[nodemon] starting `node app.js`
+Conectado no ID: 116
+Resultado:  [ RowDataPacket { nome: 'Cesar', email: 'cesar@email.com' } ]
+
+</pre>
+
+
+
+
+
+
 
 
 
