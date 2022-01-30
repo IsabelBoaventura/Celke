@@ -176,6 +176,7 @@ videos desde o inicio
 Node.js #1 - O que é Node e como instalar o Node.js no Windows
 
 Node.js #2 - Como usar o Node.js na prática
+
 	https://www.youtube.com/watch?v=qxkXSDTL5LY&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=2
 
 cria a pasta onde vai ser trabalhado
@@ -190,6 +191,7 @@ criado o arquivo 'calDesconto.js'
 criar a funcao dentro deste arquivo;
 
 Node.js #3 - Criar o servidor http na maquina com Node e imprimir o texto no navegador usando o Node
+
 	https://www.youtube.com/watch?v=7Oem0XPdTbg&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=3
 
 
@@ -384,6 +386,7 @@ Para o atributo 'test command' (Teste de Comando) usaremos:
 \' echo \"Error: no test specified\" && exit 1 \'
 
 ## Extensão MYSQL
+
 	https://www.npmjs.com/package/mysql
 
 #### npm install mysql
@@ -485,6 +488,85 @@ Conectado no ID: 116
 Resultado:  [ RowDataPacket { nome: 'Cesar', email: 'cesar@email.com' } ]
 
 </pre>
+
+* Node.js #8 - Como cadastrar com Node.js no banco de dados
+
+Usando o MySQL Workbench criamos o schema ( banco de dados ) planilha_freeline;
+
+vamos ver a conexao se esta funcionando. 
+
+Criamos o Banco de Dados (schema) 'planilha_freeline', a tabela 'usuarios' e seu campos, no MySQL WorkBench;
+
+Fizemos o sistema inserir no banco. 
+
+
+* Node.js #9 - Como editar registro no banco de dados MySQL com Node
+
+No WorkBench para ver as modificações quando o sistema ja esta aberto,  clica no ícone que parece um raio com o simbolo do cursor em cima. Tem o mesmo efeito do atualizar do phpmyadmin.
+
+
+* Node.js #10 - Como apagar registro no banco de dados MySQL com Node
+
+Lembrando que nao estou apagando a informação do insert e agora nem do update.
+
+Outra situação, no Nosso sistema nao iremos excluir, iremos fazer update para a Situacao 'E' como é no simplesweb. 
+
+
+* Node.js #11 - Como instalar e usar o Sequelize no Node.js
+
+Agora com o Sequelize, iremos criar a tabela clientes. 
+
+	https://www.npmjs.com/package/sequelize
+
+	
+Instalar o Sequelize
+#### npm install --save sequelize
+
+Instalar qual o banco de Dados que iremos usar:
+#### npm install --save mysql2
+
+
+Getting started
+
+	https://sequelize.org/master/manual/getting-started.html
+
+
+Depois de conectado com sucesso, vamos para criar uma tabela 
+Modeling a table
+
+
+As tabelas criadas pelo Sequelize,  já tem um id, criado automaticamente e que já é chave primaria 
+e ja vem  com 'createdAt' e 'updatedAt' ambos referente a data de criação e data de modificação. 
+
+
+
+
+
+node app.js 
+Conexao realizada com sucesso. 
+
+
+Primeira informação adicionada no banco de dados com o Sequelize
+![image](https://user-images.githubusercontent.com/1613816/151711139-848c5fe5-0a63-41a7-a016-ae437f261d6a.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
