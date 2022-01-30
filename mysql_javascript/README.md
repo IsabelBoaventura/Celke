@@ -167,15 +167,15 @@ ALTER SCHEMA `celke`  DEFAULT CHARACTER SET utf8  DEFAULT COLLATE utf8_unicode_c
 
 Agora vamos para o sistema que devemos criar 
 
-Node.js #7 - Node + MySQL + Workbench - Como conectar o Node com banco de dados
+* Node.js #7 - Node + MySQL + Workbench - Como conectar o Node com banco de dados
 
 Este é o site anterior
-Node.js #6 - Como carregar arquivo HTML no Node.js
+* Node.js #6 - Como carregar arquivo HTML no Node.js
 
 videos desde o inicio
-Node.js #1 - O que é Node e como instalar o Node.js no Windows
+* Node.js #1 - O que é Node e como instalar o Node.js no Windows
 
-Node.js #2 - Como usar o Node.js na prática
+* Node.js #2 - Como usar o Node.js na prática
 
 	https://www.youtube.com/watch?v=qxkXSDTL5LY&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=2
 
@@ -190,7 +190,7 @@ criado o arquivo 'calDesconto.js'
 
 criar a funcao dentro deste arquivo;
 
-Node.js #3 - Criar o servidor http na maquina com Node e imprimir o texto no navegador usando o Node
+* Node.js #3 - Criar o servidor http na maquina com Node e imprimir o texto no navegador usando o Node
 
 	https://www.youtube.com/watch?v=7Oem0XPdTbg&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=3
 
@@ -208,7 +208,7 @@ e abra o navegador com 'localhost:8080'
 Toda a vez que fizer uma modificação , faça  parar o sistema "ctrl" + "c" e reinicie o node novamente "node index.js"
 
 
-Node.js #4 - Como instalar o Express no Node.js e criar rotas no Node.js
+* Node.js #4 - Como instalar o Express no Node.js e criar rotas no Node.js
 
 Instalar o Express
 
@@ -242,7 +242,7 @@ Tutorial
 
 
 
-Node.js #5 - Como instalar o Nodemon no Node.js para o servidor ser recarregado automaticamente
+* Node.js #5 - Como instalar o Nodemon no Node.js para o servidor ser recarregado automaticamente
 
 	https://www.youtube.com/watch?v=76fP9ValZIE&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=5
 
@@ -292,7 +292,7 @@ resposta do cmd , adorei
 
 
 
-Node.js #6 - Como carregar arquivo HTML no Node.js
+* Node.js #6 - Como carregar arquivo HTML no Node.js
 
 	https://www.youtube.com/watch?v=2h8jg2cZT1M&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=6
 
@@ -325,7 +325,7 @@ A partir daqui adicionar no readme.md
 
 Estamos no video 07
 
-Node.js #7 - Node + MySQL + Workbench - Como conectar o Node com banco de dados
+* Node.js #7 - Node + MySQL + Workbench - Como conectar o Node com banco de dados
 
 	https://www.youtube.com/watch?v=5JnPd_YckQw&list=PLmY5AEiqDWwBHJ3i_8MDSszXXRTcFdkSu&index=7
 
