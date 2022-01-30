@@ -143,6 +143,17 @@ CREATE TABLE celke.contas_pagas (
 </pre>
 Apply -> Finish 
 
+## Guardar esta informação
+
+<pre>
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'admin_tabela',
+    password: '123456',
+    database: 'planilha_freeline'
+});
+</pre>
+
 <pre>
 ALTER TABLE celke.contas_pagas 
 CHANGE COLUMN id_contas_pagas id_contas_pagas INT NOT NULL AUTO_INCREMENT ;
