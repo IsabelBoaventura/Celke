@@ -551,28 +551,111 @@ Primeira informação adicionada no banco de dados com o Sequelize
 
 
 
+Inserindo dados na tabela 
+
+User.create({ nome_do_campo: 'conteudo_do_campo', nome_do_campo_N: 'conteudo_do_campo_N', });
+
+Pode adicionar apenas os campos que tem Conteudo os restantes pode deixar sem. 
+
+* Node.js #12 - Como instalar o Handlebars no Node e criar o layout padrão para o projeto
+
+	https://handlebarsjs.com/
+
+#### npm install --save handlebars 
+
+handlebars exclusivo para express
+#### npm install --save express-handlebars
+
+
+Configurar o  'app.js' com apenas as informações para usar o Handlebars
+
+criar a pasta 'views'
+Dentro da pasta 'views' , criar a pasta 'layout' e dentro da pasta ' layout' criar o arquivo  'main.handlebars'
+
+No arquivo 'main.handlebars' criar as configurações de uma página html.
+
+Dentro do Body adicionar `{{{body}}}`
+
+Incluir no arquivo 'app.js' o arquivo criado;
+
+## Erro na apresentacao 
+
+Tentativa de arrumar fora do site do Celke:
+
+	https://stackabuse.com/guide-to-handlebars-templating-engine-for-node/
+
+#### npm install --save express express-handlebars
+
+No lugar de ser exensao 'handlebars' usar 'hbs' fica menor;
+
+.
+├── app.js
+└── views
+    ├── home.hbs
+    └── layouts
+        └── main.hbs
+	
+Seguindo este site tivemos o mesmo resultado.
+
+O que deu certo, foi utilizar o arquivo 'app.js' desta forma:
+<pre>
+const express = require('express');
+const { engine } = require ('express-handlebars');
+
+const app = express();
+
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set("views", "./views");
+
+app.get('/', (req, res) => {
+    res.render('main');
+});
+
+app.listen(3000);
+
+</pre>
+
+Estas informações encontrei neste site:
+
+	https://stackoverflow.com/questions/69962757/typeerror-handlebars-is-not-a-function
 
 
 
 
 
+# Retornando
+
+Depois de ver outros sites e tutorias e achar uma forma diferente de fazer o Handlebars  funcionar.
+
+Estamos testando a primeira página:
+`localhost:8080/pagamento`
+
+Pagina mostrando a mensagem como indicado.
+
+
+## Criando paginas com Estilo
+
+Dentro da pasta view,  iremos criar o arquivo 'pagamento.handlebars'
+
+Será criado apenas o corpo da pagina, nem um cabeçalho do html. Apenas o conteudo do body.
+Na página 'main.handlebars' iremos adicionar os estilos e o Footer para testarmos se esta adicionado as informações de uma página na outra.
+
+![image](https://user-images.githubusercontent.com/1613816/152446445-8b4a2a69-22ae-477d-928b-12eb3d04735b.png)
+
+Mas a página Usuarios,  do projeto Original ainda sem respostas positivas.
 
 
 
+* Node.js #13 - Como criar o formulário com Node e salvar no banco de dados
 
+Formularios com os dados sendo adicionado no banco de dados 
 
+    https://www.npmjs.com/package/body-parser
 
+    
 
-
-
-
-
-
-
-
-
-
-
+    #### `npm install --save body-parser`
 
 
 
