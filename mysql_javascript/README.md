@@ -1,7 +1,10 @@
 # Teste para Projeto 
 
-Teste para implementar o Projeto `planilha_freeline`. 
+Teste para implementar o Projeto `planilha_freeline`.
+
 Esta documentação esta sem nenhuma regra,  mas por enquanto preciso que fique registrado o passo_a_passo, com o tempo vou adicionando as regras e escrevendo corretamente.
+
+A medida que a informação estiver correta neste projeto de teste, vou adicionando no projeto original.
 
 Projeto principal deve usar: HTML, CSS, Javascript e Banco de Dados. 
 
