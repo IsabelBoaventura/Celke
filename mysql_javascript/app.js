@@ -1,64 +1,47 @@
-/* 01
-console.log('Ola Mundo!');
-console.log('Gerenciador Financeiro!');*/
-
-/* 02
-var cliente  = "Nome do Cleinte";
-console.log('Cliente: ' + cliente );
-
-
-var valorProduto = 100;
-var valorDesconto = 37;
-
-
-var descontoFuncao = require("./modules/calDesconto");
-
- var finalValor = descontoFuncao( valorProduto, valorDesconto);
- console.log(finalValor );
-
- */
-
-
-/* 03 
-
-var http = require('http');
-http.createServer( function ( req, res ){
-    res.end("Gerenciador Financeiro");
-
-}).listen(8080);
-
-*/
-const express =  require("express");
-
+const express = require("express");
 const app = express();
+//const handlebars = require("express-handlebars");
+const { engine } = require ('express-handlebars');
 
-app.get("/", function(req, res) {
-    res.sendFile(__dirname+"/src/index.html");
-   // res.send("Gerenciador de Estoque 20-01-2022 20:28 Isabel ") 
+const bodyParser =  require('body-parser');
+
+
+
+
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.set("views", "./views");
+
+
+app.use(bodyParser.urlencoded({ extend: false }));
+app.use(bodyParser.json());
+
+
+//Rota para pagamento
+
+app.get('/cad-pagamento', function(req, res ){
+   // res.send('Formulario para cadastrar pagamento');
+   res.render('cad-pagamentos');
+});
+app.post('/add-pagamento', function(req, res ){
+   // res.send('Formulario para cadastrar pagamento');
+   res.send("Nome: " + req.body.nome + "<br>Valor: "+ req.body.valor + "<br>" );
+});
+
+
+//Rota LISTAR pagamentos
+app.get('/pagamento', function(req, res ){
+    res.render('pagamento');
+});
+
+
+//Usuarios da Planilha- Freeline
+app.get('/usuarios', function(req, res ){
+    res.render('usuarios');
 });
 
 
 
-app.get("/contato", function(req, res) {
-      res.sendFile(__dirname+"/src/contato.html");__dirname+"/src/index.html"//
-    
-
-    //res.send("Gerenciador de Contato ") 
+app.listen(8080, () => {
+    console.log('o web server esta trabalhando na porta 8080.');
 });
-
-
-
-app.get("/blog", function(req, res) {
-
-    res.send("Pagina de Blog") 
-});
-
-
-
-app.get("/sobre-empresa", function(req, res) {
-
-    res.send("Pagina Sobre a Empresa") ;
-});
-
-app.listen(8080)
-
