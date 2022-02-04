@@ -656,9 +656,43 @@ Formularios com os dados sendo adicionado no banco de dados
 
     https://www.npmjs.com/package/body-parser
 
-    
+#### `npm install --save body-parser`
 
-    #### `npm install --save body-parser`
+
+# Atenção
+
+Para recriar este projeto em outro pc, pelo o que o Celke informou  basta ter o projeto e package.json
+No novo pc, depois de baixado  o projeto se usaria o comando
+
+#### `npm update`
+
+Com isto seria reinstalado o projeto com as dependências existentes no package.json
+
+Testar amanhã no outro pc.
+===========================
+
+Dentro do arquivo app.js iremos criar o 'app.post' que irá receber as informações do formulário que consta na página html.
+
+<pre>
+app.post('/add-pagamento', function(req, res ){
+   res.send("Nome: " + req.body.nome + "<br>Valor: "+ req.body.valor + "<br>" );
+});
+</pre>
+
+Iremos rodar a página do Formulário dos Pagamentos ( http://localhost:8080/cad-pagamento ) digitaremos as informações e quando clicar no botão 'Cadastrar' o sistema reencaminhará para a página de lista de pagamentos ( http://localhost:8080/add-pagamento ) mostrando a informação recebida. 
+
+Página do Formulário
+![image](https://user-images.githubusercontent.com/1613816/152462402-fc911091-6f2c-4d02-9d45-2d97bd947f26.png)
+
+
+Página com as Informações Recebidas do Formulário:
+![image](https://user-images.githubusercontent.com/1613816/152462467-ab3f2edc-7c03-4a43-ad96-8a8fe2ae45f3.png)
+
+
+
+
+
+
 
 
 
