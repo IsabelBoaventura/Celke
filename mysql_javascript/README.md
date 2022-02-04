@@ -699,6 +699,18 @@ Forma para exportar a conexao com o banco:
     		sequelize: sequelize
 	}
 	
+
+
+Na mesma pasta 'models' será criado o arquivo `Pagamento.js`;
+Que ira reescrever o Codigo com a criação da Tabela já realziada anteriormente.
+
+
+Por que ? Por que ?
+
+Reiniciando o servidor. Entrar dentro do arquivo 'models' ( comando cmd 'cd models') usar apenas o `node app.js`
+
+
+	
 	
 
 
