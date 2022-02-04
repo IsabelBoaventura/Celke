@@ -690,6 +690,20 @@ Página com as Informações Recebidas do Formulário:
 
 
 
+Será criada a pasta 'models' e dentro dela o arquivo `db.js` que será o encarregado por fazer a conexao com o banco de Dados. 
+
+Forma para exportar a conexao com o banco:
+
+	module.exports = {
+    		Sequelize: Sequelize,
+    		sequelize: sequelize
+	}
+	
+	
+
+
+
+
 
 
 
