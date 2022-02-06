@@ -701,25 +701,78 @@ Forma para exportar a conexao com o banco:
 	
 
 
+modules -> Pagamento.js
+
 Na mesma pasta 'models' será criado o arquivo `Pagamento.js`;
-Que ira reescrever o Codigo com a criação da Tabela já realziada anteriormente.
+Que ira reescrever o Codigo com a criação da Tabela e colunas já realziada anteriormente.
+
+Comentamos a linha de criar a tabela, para ela  não ser recriada a todo o momento;
+
+Deixamos a pagina como exportável 
+
+`module.exports = Pagamento;`
 
 
-Por que ? Por que ?
-
-Reiniciando o servidor. Entrar dentro do arquivo 'models' ( comando cmd 'cd models') usar apenas o `node app.js`
-
-
-	
-	
+Voltamos para o arquivo 'app.js' onde iremos trabalhar com a pagina 'Pagamento.js'
+na rota 'app.post'. Antes incluir o moulo Pagamento;
+const pagamento = require("./models/Pagamento");
 
 
+Adicionouo no banco de dados!!
+Agora redirecionar para a pagina de listar os pagamentos 
+
+
+* Node.js #14 - Como listar registros do banco de dados com Node.js
+
+Listar Pagamentos é o arquivo 'pagamento.handlebars' que esta dentro da pasta views;
+
+Documentação da Sequelize
+findAll()
+
+Erro ao listas as informações do Banco de Dados:
+
+
+Handlebars: Access has been denied to resolve the property "nome" because it is not an "own property" of its parent.
+You can add a runtime option to disable the check or this warning:
+See https://handlebarsjs.com/api-reference/runtime-options.html#options-to-control-prototype-access for details
+Handlebars: Access has been denied to resolve the property "valor" because it is not an "own property" of its parent.
+You can add a runtime option to disable the check or this warning:
+See https://handlebarsjs.com/api-reference/runtime-options.html#options-to-control-prototype-access for details
+Handlebars: Access has been denied to resolve the property "createdAt" because it is not an "own property" of its parent.
+You can add a runtime option to disable the check or this warning:
+See https://handlebarsjs.com/api-reference/runtime-options.html#options-to-control-prototype-access for details
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at new NodeError (node:internal/errors:371:5)
+    at ServerResponse.setHeader (node:_http_outgoing:576:11)
+    at ServerResponse.header (D:\projetos\Celke\mysql-node-javascript\node_modules\express\lib\response.js:776:10)
+    at ServerResponse.send (D:\projetos\Celke\mysql-node-javascript\node_modules\express\lib\response.js:170:12)
+    at done (D:\projetos\Celke\mysql-node-javascript\node_modules\express\lib\response.js:1013:10)
+    at ExpressHandlebars.<anonymous> (D:\projetos\Celke\mysql-node-javascript\node_modules\express-handlebars\dist\express-handlebars.js:301:25)
+    at step (D:\projetos\Celke\mysql-node-javascript\node_modules\express-handlebars\dist\express-handlebars.js:49:23)
+    at Object.next (D:\projetos\Celke\mysql-node-javascript\node_modules\express-handlebars\dist\express-handlebars.js:30:53)
+    at fulfilled (D:\projetos\Celke\mysql-node-javascript\node_modules\express-handlebars\dist\express-handlebars.js:21:58)
 
 
 
 
 
 
+Site com uma opção de ajuda:
+
+	http://www.prowebguru.com/2020/08/nodejs-express-handlebars-access-denied-resolve-property-solution/#.Yf-58Juencd
 
 
+Como ficou no meu Código:
+
+	  
+app.engine('handlebars', engine({
+    defaultLayout: 'main',
+        runtimeOptions: {
+            allowProtoPropertiesByDefault: true,
+            allowProtoMethodsByDefault: true
+        }
+
+}));
+app.set('view engine', 'handlebars');
+app.set("views", "./views");
 
