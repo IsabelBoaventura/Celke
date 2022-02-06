@@ -784,6 +784,58 @@ Como esta no Bnaco de Dados:
 
 ![image](https://user-images.githubusercontent.com/1613816/152681513-f322c7ab-b315-46ec-946c-35996bf65bd2.png)
 
+Para o formato da Data, iremos trabalhar com o `moment`
+
+	#### `npm install --save moment`
+
+Esta nova extensão será chamada no arquivo principal 'app.js';
+
+Agora acrescentando o Helpers no Handlebars 
+
+<pre>
+app.engine('handlebars', engine({
+    defaultLayout: 'main',
+        helpers:{
+            formatDate: (date) => {
+                return moment(date).format('DD/MM/YYYY')
+            }
+
+        },
+        runtimeOptions: {
+            allowProtoPropertiesByDefault: true,
+            allowProtoMethodsByDefault: true
+        }
+
+}));
+app.set('view engine', 'handlebars');
+app.set("views", "./views");
+</pre>
+
+
+A lista com os pagamentos, não esta indo direto, quando fazemos a rota para adicionar um novo registro no banco
+Fica aparecendo  que o sistema não consegue ler o que já tem no banco, quando pega esta rota. 
+Repeti o Código de pagamento  no Cadastro também, e agora estão aparecendo os pagamentos registrados. 
+
+Ordenando as informações, usando a Documentação do Sequelize para a ordenação.
+
+* Node.js #15 - Como apagar registro do banco de dados com Node.js
+
+
+
+
+
+	  
+
+
+	
+
+
+
+
+
+
+
+
 
 
 
