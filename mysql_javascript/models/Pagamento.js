@@ -10,4 +10,7 @@ const Pagamento = db.sequelize.define('pagamentos', {
 });
 
 //Cria a tabela ( novamente)
-Pagamento.sync({force: true });
+//Pagamento.sync({force: true });
+
+
+module.exports = Pagamento; 
