@@ -763,8 +763,7 @@ Site com uma opção de ajuda:
 
 
 Como ficou no meu Código:
-
-	  
+<pre>	  
 app.engine('handlebars', engine({
     defaultLayout: 'main',
         runtimeOptions: {
@@ -775,4 +774,16 @@ app.engine('handlebars', engine({
 }));
 app.set('view engine', 'handlebars');
 app.set("views", "./views");
+</pre>
+
+Apresentação na tela:
+
+![image](https://user-images.githubusercontent.com/1613816/152681439-62c17693-c668-41ac-beda-b3bc1e54c714.png)
+
+Como esta no Bnaco de Dados:
+
+![image](https://user-images.githubusercontent.com/1613816/152681513-f322c7ab-b315-46ec-946c-35996bf65bd2.png)
+
+
+
 
